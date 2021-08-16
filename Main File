@@ -1,0 +1,85 @@
+#include <stdio.h>
+
+
+int n;
+void start();
+
+struct data
+{
+  char name[100];
+  int quant;
+};
+
+
+void option1()
+{
+  struct data obj[10];
+	for(int i=0;i<10;i++)
+  {
+  }
+}
+void option2()
+{
+  struct data obj[10];
+	char item[200];
+	int quantity;
+	printf("Enter name of the item: ");
+	scanf("%s",item);
+	printf("Quantity you would like to buy: ");
+	scanf("%d",&quantity);
+
+
+}
+void option3()
+{
+	printf("Function3");
+}
+void option4()
+{
+	printf("Function4");
+}
+
+
+
+void start1(int n)
+{
+	switch (n)
+	{
+	case 1: {
+		option1();
+		break; }
+	case 2: {
+		option2();
+		break; }
+	case 3: {
+		option3();
+		break; }
+	case 4: {
+		option4();
+		break;
+	}
+	default: {
+		printf("\nYou have entered an invalid input please try again");
+		start(); }
+	}
+}
+
+void start()
+{
+	printf("What do you want to do?\n");
+	printf("To see all the available items enter  1\n");
+	printf("To buy something enter                2\n");
+	printf("To see your cart enter                3\n");
+	printf("To exit enter                         4\n");
+	scanf("%d", &n);
+	start1(n);
+}
+
+
+
+
+int main()
+{
+	printf("       Hello to the Store\n");
+	start();
+}
